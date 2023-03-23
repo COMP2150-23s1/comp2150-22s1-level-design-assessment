@@ -7275,7 +7275,7 @@ PrefabInstance:
     - target: {fileID: 6563598353547664190, guid: a03eb3547a5d9ca438af9365793eb9c4,
         type: 3}
       propertyPath: newSceneName
-      value: ~EndOfGame
+      value: End Of Game
       objectReference: {fileID: 0}
     - target: {fileID: 6563598353547664190, guid: a03eb3547a5d9ca438af9365793eb9c4,
         type: 3}
