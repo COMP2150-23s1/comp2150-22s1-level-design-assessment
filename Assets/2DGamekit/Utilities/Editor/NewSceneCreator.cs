@@ -13,21 +13,21 @@ namespace Gamekit2D
 
         protected readonly GUIContent m_NameContent = new GUIContent ("New Scene Name");
     
-        [MenuItem("Kit Tools/Create Template Scene...", priority = 100)]
+        [MenuItem("Kit Tools/Create Template Level Design Scene...", priority = 100)]
         static void Init ()
         {
             NewSceneCreator window = GetWindow<NewSceneCreator> ();
             window.Show();
-            window.m_NewSceneName = "NewScene";
+            window.m_NewSceneName = "Level Design_2";
         }
 
         void OnGUI ()
         {
             m_NewSceneName = EditorGUILayout.TextField (m_NameContent, m_NewSceneName);
         
-            if(GUILayout.Button ("Create Template Scene in Assets"))
+            if(GUILayout.Button ("Create Template Level Design Scene in Assets"))
                 CheckAndCreateScene ();
-            else if (GUILayout.Button("Create Template Scene in Assets/~Assignment/Prototype"))
+            else if (GUILayout.Button("Create Template Level Design Scene in Assets/Scenes"))
                 CheckAndCreatePrototype();
         }
 
