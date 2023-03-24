@@ -25,9 +25,9 @@ namespace Gamekit2D
         {
             m_NewSceneName = EditorGUILayout.TextField (m_NameContent, m_NewSceneName);
         
-            if(GUILayout.Button ("Create Template Level Design Scene in Assets"))
+            /*if(GUILayout.Button ("Create Template Level Design Scene in Assets"))
                 CheckAndCreateScene ();
-            else if (GUILayout.Button("Create Template Level Design Scene in Assets/Scenes"))
+            else */if (GUILayout.Button("Create Template Level Design Scene in Assets/Scenes"))
                 CheckAndCreatePrototype();
         }
 
@@ -129,7 +129,7 @@ namespace Gamekit2D
 
             if (result.Length > 0)
             {
-                string newScenePath = "Assets/~Assignment/Prototypes/" + m_NewSceneName + ".unity";
+                string newScenePath = "Assets/Scenes/" + m_NewSceneName + ".unity";
                 AssetDatabase.CopyAsset(AssetDatabase.GUIDToAssetPath(result[0]), newScenePath);
                 AssetDatabase.Refresh();
                 Scene newScene = EditorSceneManager.OpenScene(newScenePath, OpenSceneMode.Single);
