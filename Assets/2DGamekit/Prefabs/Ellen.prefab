@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4190244102070708}
   m_RootOrder: 3
@@ -185,6 +186,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.18, y: -4.206, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4456631231676054}
   - {fileID: 4929711121330312}
@@ -210,10 +212,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -251,7 +255,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &95245875792028280
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -264,10 +268,11 @@ Animator:
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!70 &70340845508230026
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -333,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeecda2baef25704c8fe802e627e9f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputType: 0
+  inputType: 1
   Pause:
     key: 27
     controllerButton: 8
@@ -344,7 +349,7 @@ MonoBehaviour:
     m_Enabled: 1
   MeleeAttack:
     key: 107
-    controllerButton: 3
+    controllerButton: 1
     m_Enabled: 0
   RangedAttack:
     key: 111
@@ -352,7 +357,7 @@ MonoBehaviour:
     m_Enabled: 0
   Jump:
     key: 32
-    controllerButton: 1
+    controllerButton: 2
     m_Enabled: 1
   Horizontal:
     positive: 100
@@ -361,7 +366,7 @@ MonoBehaviour:
   Vertical:
     positive: 119
     negative: 115
-    controllerAxis: 2
+    controllerAxis: 4
   dataSettings:
     dataTag: PlayerInput
     persistenceType: 3
@@ -435,6 +440,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ChangeHitPointUI
         m_Mode: 0
         m_Arguments:
@@ -449,6 +455,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114854669915511232}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnHurt
         m_Mode: 0
         m_Arguments:
@@ -463,6 +470,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114854669915511232}
+        m_TargetAssemblyTypeName: 
         m_MethodName: OnDie
         m_Mode: 1
         m_Arguments:
@@ -541,6 +549,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -559,6 +568,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -577,6 +587,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -595,6 +606,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114734347468151670}
+          m_TargetAssemblyTypeName: 
           m_MethodName: EnableMeleeAttacking
           m_Mode: 1
           m_Arguments:
@@ -609,6 +621,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114734347468151670}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DisableMeleeAttacking
           m_Mode: 1
           m_Arguments:
@@ -624,6 +637,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114734347468151670}
+          m_TargetAssemblyTypeName: 
           m_MethodName: EnableRangedAttacking
           m_Mode: 1
           m_Arguments:
@@ -638,6 +652,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114734347468151670}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DisableRangedAttacking
           m_Mode: 1
           m_Arguments:
@@ -653,6 +668,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -671,6 +687,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -689,6 +706,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -707,6 +725,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -725,6 +744,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -743,6 +763,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114854669915511232}
+          m_TargetAssemblyTypeName: 
           m_MethodName: KeyInventoryEvent
           m_Mode: 1
           m_Arguments:
@@ -757,6 +778,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 114734347468151670}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DisableRangedAttacking
           m_Mode: 1
           m_Arguments:
@@ -796,6 +818,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4043387964200818}
   - {fileID: 4854088295658722}
@@ -833,6 +856,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4190244102070708}
   m_RootOrder: 0
@@ -988,6 +1012,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.05, y: 0.25, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 7
@@ -1003,10 +1028,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1088,6 +1115,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 8
@@ -1128,6 +1156,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4190244102070708}
   m_RootOrder: 2
@@ -1275,6 +1304,7 @@ Transform:
   m_LocalRotation: {x: 0.14790303, y: -0, z: -0, w: 0.9890019}
   m_LocalPosition: {x: -0.07, y: 0.2909999, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 5
@@ -1338,6 +1368,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1656601937457706
@@ -1366,6 +1397,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 9
@@ -1396,6 +1428,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 2
@@ -1426,6 +1459,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.155, y: 1.543, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 0
@@ -1456,6 +1490,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.155, y: 1.543, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 1
@@ -1486,6 +1521,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 3
@@ -1518,6 +1554,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4190244102070708}
   m_RootOrder: 1
@@ -1664,6 +1701,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4190244102070708}
   m_RootOrder: 4
@@ -1810,6 +1848,7 @@ Transform:
   m_LocalRotation: {x: 0.14790303, y: -0, z: -0, w: 0.9890019}
   m_LocalPosition: {x: -0.07000005, y: 1.2909999, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4212235226361802}
   m_RootOrder: 4
@@ -1873,5 +1912,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
